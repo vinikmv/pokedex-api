@@ -7,7 +7,7 @@ import cors from 'cors';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
-import AppError from '../errors/AppErros';
+import AppError from '../errors/AppError';
 import routes from './routes';
 
 const app = express();

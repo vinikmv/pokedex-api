@@ -1,4 +1,4 @@
-import AppError from '@shared/infra/errors/AppErros';
+import AppError from '@shared/infra/errors/AppError';
 import FakePokemonRepository from '../IRepositories/fake/FakePokemonRepository';
 import DeletePokemonByIdService from './DeletePokemonByIdService';
 import ListPokemonByIdService from './ListPokemonByIdService';

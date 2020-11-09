@@ -1,4 +1,4 @@
-import AppError from '@shared/infra/errors/AppErros';
+import AppError from '@shared/infra/errors/AppError';
 import { inject, injectable } from 'tsyringe';
 import IPokemonRepository from '../IRepositories/IPokemonRepository';
 
