@@ -1,4 +1,5 @@
 {
+  "name": "default",
   "type": "postgres",
   "host": "localhost",
   "port": "5432",
@@ -11,3 +12,6 @@
     "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
 }
+
+
+
