@@ -2,6 +2,7 @@ import AppError from '@shared/infra/errors/AppError';
 import { inject, injectable } from 'tsyringe';
 import Pokemon from '../infra/typeorm/entities/Pokemon';
 import IPokemonRepository from '../IRepositories/IPokemonRepository';
+import IValidationProvider from '../providers/validation/models/IValidationProvider';
 
 interface abilityObject {
   ability: string;
@@ -22,6 +23,8 @@ interface IRequestPokemon {
 class CreatePokemonService {
   constructor(
     @inject('PokemonRepository') private pokemonRepository: IPokemonRepository,
+    @inject('ValidateFieldProvider')
+    private validateProvider: IValidationProvider,
   ) {}
 
   public async execute({
@@ -31,6 +34,12 @@ class CreatePokemonService {
     abilities,
     moves,
   }: IRequestPokemon): Promise<Pokemon> {
+    const fieldArray = [id, name, type];
+    const field2Array = [abilities, moves];
+
+    fieldArray.forEach(this.validateProvider.validateString);
+    field2Array.forEach(this.validateProvider.validateArray);
+
     const pokemonAlreadyExist = await this.pokemonRepository.findById(id);
 
     if (pokemonAlreadyExist) {
