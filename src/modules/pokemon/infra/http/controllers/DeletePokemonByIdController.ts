@@ -12,6 +12,6 @@ export default class DeletePokemonByIdController {
 
     await deletePokemonByIdService.execute({ id });
 
-    return response.status(204).json();
+    return response.status(200).json();
   }
 }
