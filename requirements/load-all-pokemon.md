@@ -3,7 +3,7 @@
 > ## Caso de sucesso
 
 1. ✅ Recebe uma requisição do tipo **GET** na rota **/pokemon**
-2. ✅ Retorna **200** com os dados das enquetes
+2. ✅ Retorna **200** com os dados de todos os pokémons cadastrados
 
 > ## Exceções
 
