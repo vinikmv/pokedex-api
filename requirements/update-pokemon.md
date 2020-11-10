@@ -3,7 +3,7 @@
 > ## Caso de sucesso
 
 1. ✅ Recebe uma requisição do tipo **PUT** na rota **/pokemon/:id**
-2. ✅ Retorna **200** com os dados do pokémon
+2. ✅ Retorna **200** com os dados do pokémon atualizado
 
 > ## Exceções
 
